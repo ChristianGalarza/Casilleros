@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+:root{
+    /*--- colores ---*/
+    --grisOscuro:#A9A6A2;
+    --grisClaro:#D3D0CB;
+    --celda:#393E41;
+}
+/*--- globales ---*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    row-gap: 15px;
+}
+.wrapper{
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+/*--- casilleros ---*/
+.casillero{
+    /* border:1px solid red; */
+    height: 190px;
+    width: 150px;
+    background: var(--grisOscuro);
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;   
+}
+.casillero-tapa{
+    height:  170px;
+    width: 130px;
+    background: var(--grisClaro);
+    border-radius: 5px;
+}
+
+.celdas{
+    width: 56px;
+    height: 7px;
+    border-radius: 5px;
+    background: var(--celda);
+    margin: 13px auto;
+}
+
+.casillero-tapa-box{
+    margin-top: 25px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+p{
+    /* border:1px solid red; */
+    font-size: 36px;
+    color: white;
+    display: flex;
+}
+
+.palanca{
+    /* border:1px solid blue; */
+    height: 30px;
+    width: 5px;
+    background: var(--celda);
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+.titulo{
+    height: 10vh;
+    background-color: #455A64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gimnasio{
+    color: white;   
+}
+/*--- modal ---*/
+.modal {
+    display: block; /* Hidden by default */    
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 65%; /* Full width */
+    height: 60%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #455A64;
+    border-radius: 10px;
+    min-width: 500px;
+  }
+  .modal-head{
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .modal h1 {
+      color: white;
+  }
+  .modal .input-nombre{
+    color:white;
+    padding-top: 15px;
+    padding-left: 40px;
+    font-size: 18px;
+}
+.input-nombre label{
+    margin-right: 20px;
+    font-size: 30px;
+}
+
+input{
+    font-size: 30px;
+    background-color: #455A64;
+    border: 0;
+    border-bottom: 1px solid #FFFFFF;
+    color:white;
+}
+.modal button{
+    padding: 10px;
+    background: #718792;
+    border-radius: 5px;
+
+    border: 1px solid #1C313A;
+    color: white;
+}
+  
+.boton{
+    display:flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.boton > button {
+      width:130px;
+      height:40px;
+}
+/*--- modal content/box ---*/
+/*--- boton---*/
+/*--- btn-cerrar ---*/
+.btn-cerrar{
+    cursor: pointer;
+}
+.linea1,.linea2{
+    width: 25px;
+    height: 2px;
+    background-color: var(--grisClaro);
+    margin: 5px;
+}
+.linea1{
+    transform: rotate(-45deg) translate(-3px,2px);
+}
+.linea2{
+    transform: rotate(45deg) translate(-3px,-2px);
+}
+
+
+
